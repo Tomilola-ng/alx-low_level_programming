@@ -14,7 +14,7 @@ int main(void)
 	while (i < 26)
 	{
 		putchar(letter);
-		ch++;
+		letter++;
 		i++;
 	}
 	letter = 'A';
@@ -22,7 +22,7 @@ int main(void)
 	while (i < 26)
 	{
 		putchar(letter);
-		ch++;
+		letter++;
 		i++;
 	}
 	putchar('\n');
