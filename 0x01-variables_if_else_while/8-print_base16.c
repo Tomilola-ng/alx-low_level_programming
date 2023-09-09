@@ -8,15 +8,15 @@
 
 int main(void)
 {
-    char hex_digits[] = "0123456789abcdef"; /* Array of hexadecimal digits */
-    int i = 0;
+	char hex_digits[] = "0123456789abcdef"; /* Array of hexadecimal digits */
+	int i = 0;
 
-    while (i < 16)
-    {
-        putchar(hex_digits[i]); /* Print the hexadecimal digit */
-        i++;
-    }
+	while (i < 16)
+	{
+		putchar(hex_digits[i]); /* Print the hexadecimal digit */
+		i++;
+	}
 
-    putchar('\n'); /* Print a new line */
-    return (0);
+	putchar('\n'); /* Print a new line */
+	return (0);
 }
