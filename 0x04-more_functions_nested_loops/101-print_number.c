@@ -1,9 +1,12 @@
+#include <stdio.h>
 #include "main.h"
+
 /**
  *print_number - print integer.
  *@n: integer.
  *Return: void.
  */
+
 void print_number(int n)
 
 {
