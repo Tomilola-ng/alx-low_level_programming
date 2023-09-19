@@ -9,7 +9,7 @@
 
 void _puts(char *var_str)
 {
-	int counter;
+	int counter = 0;
 
 	while (var_str[counter])
 	{
