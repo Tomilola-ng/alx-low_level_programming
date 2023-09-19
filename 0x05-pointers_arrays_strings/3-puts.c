@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _puts - Program
+ * _puts - Program that prints a string followed by a new line to stdout.
  * @var_str: The string to be printed out
  * Return: None
  */
