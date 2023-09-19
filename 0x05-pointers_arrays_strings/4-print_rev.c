@@ -9,23 +9,16 @@
 
 void print_rev(char *var_str)
 {
-        int counter;
-        int str_length = 0;
+	int counter;
+	int index;
 
-        while (var_str[str_length] != '\0')
-        {
-                str_length++;
-        }
-
-        counter = str_length;
-
-        while (counter <=  str_length)
-        {
-                _putchar(var_str[counter]);
-                counter--;
-        }
-
+	for (counter = 0; var_str[counter] != '\0'; counter++)
+	{
+	}
+	index = counter - 1;
+	for (; index >= 0; index--)
+	{
+		_putchar(var_str[index]);
+	}
 	_putchar('\n');
-
-        return (0);
 }
