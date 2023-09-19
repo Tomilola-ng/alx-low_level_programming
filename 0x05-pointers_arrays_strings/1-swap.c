@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * swap_int - Entry point of the program
- * @num_a: Variable number been passed
- * @num_b: Other Variable number to be swapped
- * @swap_num: Agent for swapping :)
- * Return: Always 0 (Success)
+ * swap_int - Swaps two Integers.
+ * @num_a: Pointer to the first integer to swap.
+ * @num_b: Pointer to the second integer to swap.
+ * Return: None
  */
 
 void swap_int(int *num_a, int *num_b)
