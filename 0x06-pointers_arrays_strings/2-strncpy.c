@@ -18,14 +18,14 @@ char *_strncpy(char *dest, char *src, int n)
 	for (counter = 0; counter < n; counter++)
 	{
 		if (counter < len)
-    {
+		{
 			dest[counter] = src[counter];
-    }
-    else
-    {
+		}
+		else
+		{
 			dest[counter] = '\0';
-    }
+		}
 	}
-  
+	
 	return (dest);
 }
