@@ -4,9 +4,9 @@
 
 /**
  * _strcat - Program to concatenate 2 strings
- * @src: variable array
- * @dest: variable char
- * Return: The length
+ * @src: The source string to be appended to dest.
+ * @dest: The destination string, where src will be appended.
+ * Return: A pointer to the resulting concatenated string (dest).
  */
 
 char *_strcat(char *dest, char *src)
