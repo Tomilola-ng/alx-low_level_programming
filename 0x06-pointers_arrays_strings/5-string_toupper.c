@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * string_toupper - Program that copies a string.
+ * string_toupper - Program that makes a string in uppercase
  * @src: variable string refrance
  * Return: char *src An uppercase string.
  */
@@ -19,6 +19,6 @@ char *string_toupper(char *src)
 		}
 		counter++;
 	}
-  
+
 	return (src);
 }
