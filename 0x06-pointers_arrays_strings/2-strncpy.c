@@ -26,6 +26,6 @@ char *_strncpy(char *dest, char *src, int n)
 			dest[counter] = '\0';
 		}
 	}
-	
+
 	return (dest);
 }
