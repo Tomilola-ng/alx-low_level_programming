@@ -7,22 +7,22 @@
  * Return: char *src an encoded string into 1337.
  */
 
-char *leet(char *s)
+char *leet(char *src)
 {
 	int i;
 	int index;
 	char cod[] = "aAeEoOtTlL";
 	char cod_n[] = "4433007711";
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
 		for (index = 0; cod[index] != '\0'; index++)
 		{
-			if (s[i] == cod[index])
+			if (src[i] == cod[index])
 			{
-				s[i] = cod_n[index];
+				src[i] = cod_n[index];
 			}
 		}
 	}
-	return (s);
+	return (src);
 }
