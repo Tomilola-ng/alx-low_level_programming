@@ -4,7 +4,7 @@
  * _strchr - Program to find a char in a string
  * @s: the string to be filtered
  * @c: the character as filter value
- * Return: Pointer to the found vale or null if not
+ * Return: Pointer to the found value or null if not
  */
 
 char *_strchr(char *s, char c)
@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 
 	if (c == '\0')
 	{
-		return (s);
+		return (s + counter);
 	}
 
 	while (s[counter] != '\0')
