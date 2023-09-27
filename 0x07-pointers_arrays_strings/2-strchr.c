@@ -13,6 +13,11 @@ char *_strchr(char *s, char c)
 
 	counter = 0;
 
+	if (c == '\0')
+	{
+		return (s);
+	}
+
 	while (s[counter] != '\0')
 	{
 		if (s[counter] == c)
@@ -20,11 +25,6 @@ char *_strchr(char *s, char c)
 			return (s + counter);
 		}
 		counter++;
-	}
-
-	if (c == '\0')
-	{
-		return (s);
 	}
 
 	return (NULL);
