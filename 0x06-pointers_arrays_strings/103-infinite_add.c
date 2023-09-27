@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "main.h"
 
 /*
@@ -12,44 +13,46 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int len1 = strlen(n1);
-    int len2 = strlen(n2);
-    
-    // Check if the result can fit in the buffer
-    if (len1 + 1 > size_r || len2 + 1 > size_r)
-        return 0; // Error, result too large for the buffer
-    
-    int carry = 0;
-    int max_len = (len1 > len2) ? len1 : len2;
-    int i, j, k;
+    int len1 = 0, len2 = 0, carry = 0, sum, max_len;
 
-    for (i = len1 - 1, j = len2 - 1, k = 0; k < max_len; i--, j--, k++)
+    while (n1[len1] != '\0')
     {
-        int digit1 = (i >= 0) ? (n1[i] - '0') : 0;
-        int digit2 = (j >= 0) ? (n2[j] - '0') : 0;
-        
-        int sum = digit1 + digit2 + carry;
+        len1++;
+    }
+    while (n2[len2] != '\0')
+    {
+        len2++;
+    }
+
+    max_len = (len1 > len2) ? len1 : len2;
+
+    if (max_len + 1 > size_r)
+    {
+        return 0;
+    }
+
+    r[max_len + 1] = '\0';
+
+    for (int i = max_len; i >= 0; i--)
+    {
+        int digit1 = (i >= len1) ? 0 : n1[len1 - i - 1] - '0';
+        int digit2 = (i >= len2) ? 0 : n2[len2 - i - 1] - '0';
+
+        sum = digit1 + digit2 + carry;
+
         carry = sum / 10;
-        
-        r[k] = (sum % 10) + '0';
+
+        r[i] = (sum % 10) + '0';
     }
 
-    if (carry)
+    if (carry > 0)
     {
-        if (k >= size_r - 1)
-            return 0; // Error, result too large for the buffer
-        r[k] = carry + '0';
-        k++;
-    }
-
-    r[k] = '\0';
-
-    // Reverse the result string
-    for (int start = 0, end = k - 1; start < end; start++, end--)
-    {
-        char temp = r[start];
-        r[start] = r[end];
-        r[end] = temp;
+        if (max_len + 2 > size_r)
+        {
+            return 0;
+        }
+        r[0] = carry + '0';
+        return r;
     }
 
     return r;
