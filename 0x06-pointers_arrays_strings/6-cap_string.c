@@ -10,12 +10,12 @@
 char *cap_string(char *src)
 {
 	int counter = 0;
-  
+
 	if ((src[counter] >= 'a') && (src[counter] <= 'z'))
 	{
 		src[counter] = src[counter] - 32;
 	}
-  
+
 	while (src[counter] != '\0')
 	{
 		if ((src[counter] == ' ')
@@ -37,9 +37,9 @@ char *cap_string(char *src)
 				src[counter + 1] = src[counter + 1] - 32;
 			}
 		}
-    
+
 		counter++;
 	}
-  
+
 	return (src);
 }
