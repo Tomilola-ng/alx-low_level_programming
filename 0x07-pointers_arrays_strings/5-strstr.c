@@ -12,7 +12,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int index, counter;
 
-	for (index = 0; haystack[index] > '\0'; index++)
+	for (index = 0; haystack[counter] > '\0'; counter++)
 	{
 		for (index = counter; hackstack[index] > '\0' && needle[index - counter] > '\0'; index++)
 		{
