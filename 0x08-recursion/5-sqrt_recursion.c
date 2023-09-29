@@ -2,31 +2,30 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - Program that returns sqrt
- * num: Var
- * Return: sqrt answer
+ * _sqrt - Program that calcs square root
+ * @num: test number
+ * @num2: squared number
+ * Return: the square root of n
  */
 
-int checks(int num, int num2)
+int _sqrt(int num, int num2)
 {
-	if (num2 <= 3)
+	if (num > num2 / 2)
 		return (-1);
-
-	return num * num;
+	else if (num * num == num2)
+		return (n);
+	return (_sqrt(num + 1, num2));
 }
+
+/**
+ * _sqrt_recursion - program theat calcs square root
+ * @num: number to be used
+ * Return: the square root of n
+ */
 
 int _sqrt_recursion(int num)
 {
-	if (num <= 1)
-		return (1);
-
-	if (num == checks(num, (num - 1)))
-	{
+	if (num == 1 || num == 0)
 		return (num);
-	}
-	else
-	{
-		_sqrt_recursion(num);
-	}
+	return (_sqrt(0, num));
 }
-
