@@ -10,22 +10,24 @@
 
 int _sqrt(int num, int num2)
 {
-	if (num > num2 / 2)
+	if (num2 == 0)
 		return (-1);
-	else if (num * num == num2)
-		return (n);
-	return (_sqrt(num + 1, num2));
+	if (num2 * num2 == num)
+		return (num2);
+	return (_sqrt(num, num2 - 1));
 }
 
 /**
- * _sqrt_recursion - program theat calcs square root
+ * _sqrt_recursion - program that calcs square root
  * @num: number to be used
  * Return: the square root of n
  */
 
 int _sqrt_recursion(int num)
 {
+	if (num < 0)
+		return (-1);
 	if (num == 1 || num == 0)
 		return (num);
-	return (_sqrt(0, num));
+	return (_sqrt(num, num / 2));
 }
