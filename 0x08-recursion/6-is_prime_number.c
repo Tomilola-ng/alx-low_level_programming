@@ -1,41 +1,36 @@
 #include <stdio.h>
 #include "main.h"
 
-int is_prime(int num, int half);
-
 /**
- * is_prime_number - Program isPrimeNum
- * @num: Variable
- * Return: Prime Number Answer
+ * is_prime - Program that check number as prime.
+ * @n: variable input number.
+ * @c: iterator/counter
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
  */
 
-int is_prime_number(int num)
+int is_prime(unsigned int n, unsigned int c)
 {
-	if (num <= 1)
+	if (n % c == 0)
 	{
-		return (0);
+		if (n == c)
+			return (1);
+		else
+			return (0);
 	}
-
-	return (num, (num / 2));
+	return (0 + is_prime(n, c + 1));
 }
-
 /**
- * is_prime - my checker
- * @half: number in half
- * @num: Checks
- * Return: Yay or Nay
+ * is_prime_number - detects if an input number is a prime number.
+ * @n: input number.
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
  */
-
-int is_prime(num, half)
+int is_prime_number(int n)
 {
-	if (half <= 1)
-	{
-		return (1);
-	}
-	if (num % half == 0)
-	{
+	if (n == 0)
 		return (0);
-	}
-	return (is_prime(num, (half - 1)));
+	if (n < 0)
+		return (0);
+	if (n == 1)
+		return (0);
+	return (is_prime(n, 2));
 }
-
