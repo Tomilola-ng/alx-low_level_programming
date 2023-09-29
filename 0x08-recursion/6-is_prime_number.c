@@ -16,7 +16,7 @@ int is_prime_number(int num)
 		return (0);
 	}
 
-	return (num, num / 2);
+	return (num, (num / 2));
 }
 
 /**
@@ -36,6 +36,6 @@ int is_prime(num, half)
 	{
 		return (0);
 	}
-	return (is_prime(num, half - 1));
+	return (is_prime(num, (half - 1)));
 }
 
