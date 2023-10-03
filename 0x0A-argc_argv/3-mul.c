@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point of the program
@@ -9,19 +10,17 @@
 
 int main(int argc, char const *argv[])
 {
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
 	int mul1;
-
-	mul1 = *argv[1];
-
 	int mul2;
 
-	mul2 = *argv[2];
+	mul1 = atoi(argv[1]);
+	mul2 = atoi(argv[2]);
 
 	printf("%d\n", mul1 * mul2);
 
