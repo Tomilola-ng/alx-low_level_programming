@@ -10,19 +10,17 @@
 
 int main(int argc, char const *argv[])
 {
+	int answer;
+
 	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int mul1;
-	int mul2;
+	answer = atoi(argv[1]) * atoi(argv[2]);
 
-	mul1 = atoi(argv[1]);
-	mul2 = atoi(argv[2]);
-
-	printf("%d\n", mul1 * mul2);
+	printf("%d\n", answer);
 
 	return (0);
 }
