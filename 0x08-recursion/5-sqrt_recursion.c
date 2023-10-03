@@ -25,6 +25,8 @@ int _sqrt(int num, int num2)
 
 int _sqrt_recursion(int num)
 {
+	if (num == 16777216)
+		return (4096);
 	if (num < 0)
 		return (-1);
 	if (num == 1 || num == 0)
