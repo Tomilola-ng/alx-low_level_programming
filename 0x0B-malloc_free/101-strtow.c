@@ -1,11 +1,8 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * wordcount - get word count from string
- *             without spaces
- *
+ * wordcount - Program to get word count
  * @str: string to count words present
- *
  * Return: The number of words
 */
 
@@ -15,12 +12,10 @@ int wordcount(char *str)
 
 	while (*str != '\0')
 	{
-		/*skip spaces*/
 		if (*str == ' ')
 			str++;
 		else
 		{
-			/*count words*/
 			while (*str != ' ' && *str != '\0')
 				str++;
 			words++;
@@ -30,12 +25,10 @@ int wordcount(char *str)
 }
 
 /**
- * free_array - free arr[i]
- *
+ * free_array - Program for free arr[i]
  * @ar: array to free
  * @i: array[i]
- *
- * Return: nothing
+ * Return: Arrays
 */
 
 void free_array(char **ar, int i)
@@ -52,10 +45,8 @@ void free_array(char **ar, int i)
 }
 
 /**
- * strtow - split a string to words
- *
- * @str: string to split.
- *
+ * strtow - program to split a string
+ * @str: pointer to string to split.
  * Return: NULL if it fails
 */
 
