@@ -1,11 +1,9 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * str_concat - a function that concatenates two strings.
- *
+ * str_concat - a program that concats two strings.
  * @s1: input to string 1
  * @s2: input to string 2
- *
  * Return: NULL on faliure
 */
 
@@ -20,7 +18,6 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	/*find length of str1 & str2*/
 	while (s1[a] != '\0')
 		a++;
 	while (s2[b] != '\0')
