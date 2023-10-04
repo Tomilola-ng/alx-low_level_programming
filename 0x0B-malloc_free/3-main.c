@@ -1,6 +1,4 @@
-#include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * print_grid - prints a grid of integers
