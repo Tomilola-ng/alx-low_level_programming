@@ -1,12 +1,9 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * create_array - creates an array of chars and initializes
- *                it with a specific char.
- *
+ * create_array - creates an array of char.
  * @size: array size
  * @c: char to initialize array with
- *
  * Return: array @a
 */
 
