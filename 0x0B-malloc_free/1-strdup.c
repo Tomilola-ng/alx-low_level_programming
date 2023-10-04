@@ -1,12 +1,9 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * *_strdup - a function that duplicates a string
- *
+ * *_strdup - Program that duplicates string
  * @str: input string to duplicate
- *
- * Return: NULL if str == NULL
- *         @str
+ * Return: NULL!!
 */
 
 char *_strdup(char *str)
@@ -17,7 +14,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	/*calculate size of str*/
+	/* sizes :)€¥$x*/
 	while (str[l] != '\0')
 		l++;
 
