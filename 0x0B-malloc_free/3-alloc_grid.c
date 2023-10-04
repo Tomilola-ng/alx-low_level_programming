@@ -1,12 +1,9 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * alloc_grid - a function that returns a pointer to
- *              a 2 dimensional array of integers.
- *
+ * alloc_grid - Program that returns a pointer
  * @width: width
  * @height: height
- *
  * Return: NULL on faliure
 */
 
