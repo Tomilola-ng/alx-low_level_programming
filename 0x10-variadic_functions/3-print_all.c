@@ -1,6 +1,5 @@
-#include "main.h"
 #include <stdio.h>
-#include <stdarg.h>
+#include "variadic_functions.h"
 
 /**
  * print_all - program prints char, int, float str
