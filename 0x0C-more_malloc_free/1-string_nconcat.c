@@ -1,37 +1,41 @@
 #include "tomi.h"
-#counternclude <stddef.h>
 
 /**
- * string_nconcat - program concat 2 strings
- * @s1: var string 1
- * @s2: var string 2
- * @n: var amount of chars to be used from s2
- * Return: pointer to the new string
+ * string_nconcat - Program concats two strings.
+ * @s1: ptr to The string #1 to concat.
+ * @s2: ptr to The string #2 to concat.
+ * @n: int bytes to add from s2
+ * Return: ptr with the address of the array created.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	int counter = 0, index = 0, size_1 = strlen(s1), size_2;
+	unsigned int counter, j, x, y;
+	char *p;
 
-	n < (unsigned int) strlen(s2) ? (size_2 = n) : (size_2 = strlen(s2));
-	str = (char *) malloc(size_1 + size_2 + 1);
-	if (str != NULL)
-	{
-		for (; counter < size_1; counter++)
-		{
-			str[counter] = s1[counter];
-		}
-		for (; index < size_2; index++)
-		{
-			str[counter + index] = s2[index];
-		}
-		str[counter + index] = '\0';
-	}
-	else
-	{
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	counter = 0;
+	while (s1[counter] != '\0')
+		counter++;
+	j = 0;
+	while (s2[j] != '\0')
+		j++;
+	if (n > j)
+		n = j;
+	p = malloc(sizeof(char) * (counter + n + 1));
+	if (p == NULL)
 		return (NULL);
+	for (x = 0; x < counter; x++)
+		p[x] = s1[x];
+	j = 0;
+	for (y = x; y < (counter + n); y++)
+	{
+		p[y] = s2[j];
+		j++;
 	}
-
-	return (str);
+	p[y] = '\0';
+	return (p);
 }
