@@ -1,10 +1,8 @@
 #include "tomi.h"
-#include <stdlib.h>
 
 /**
- * _puts - program that multiplies
- * @str: ptr to the string to 
- * Return: void
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
  */
 
 void _puts(char *str)
@@ -19,9 +17,9 @@ void _puts(char *str)
 }
 
 /**
- * _atoi - program that converts string to int.
- * @s: var char type string
- * Return: integer converted not void
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
  */
 
 int _atoi(const char *s)
@@ -45,9 +43,9 @@ int _atoi(const char *s)
 }
 
 /**
- * print_int - program prints the integer.
- * @n: var int
- * Return: 0 or 1
+ * print_int - prints an integer.
+ * @n: int
+ * Return: 0
  */
 
 void print_int(unsigned long int n)
@@ -64,10 +62,10 @@ void print_int(unsigned long int n)
 }
 
 /**
- * main - program print the multiplication
- * @argc: var argument counter
- * @argv: var argument array list
- * Return: 1 or 0 or 10 'lol'
+ * main - print the result of the multiplication, followed by a new line
+ * @argc: int
+ * @argv: list
+ * Return: 0
  */
 
 int main(int argc, char const *argv[])
