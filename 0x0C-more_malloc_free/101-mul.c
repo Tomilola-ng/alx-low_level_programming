@@ -19,7 +19,7 @@ void _puts(char *str)
 /**
  * _atoi - convert a string to an integer.
  * @s: char type string
- * Return: integer converted
+ * Return: The integer converted from the string.
  */
 
 int _atoi(const char *s)
@@ -45,7 +45,6 @@ int _atoi(const char *s)
 /**
  * print_int - prints an integer.
  * @n: int
- * Return: 0
  */
 
 void print_int(unsigned long int n)
