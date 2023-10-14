@@ -2,9 +2,9 @@
 #include <stddef.h>
 
 /**
- * print_name - prints a name
- * @name: name of the person
- * @f: Pointer with the fuction to use as a parameter
+ * print_name - program to print name
+ * @name: ptr to a str
+ * @f: ptr to z with the fuction to use as a parametera func
  * Return: Nothing
  */
 
