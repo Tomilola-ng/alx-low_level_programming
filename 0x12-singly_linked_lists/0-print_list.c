@@ -3,7 +3,7 @@
 /**
  * print_list - Program to print node or nil
  * @h: singly linked list
- * Return: 0 or node count
+ * Return: node count
  */
 
 size_t print_list(const list_t *h)
@@ -12,20 +12,19 @@ size_t print_list(const list_t *h)
 
 	nodes = 0;
 
-	if (h == NULL)
-	{
-		return (0);
-	}
-
-	if ( h->str == NULL)
-	{
-		printf("[0] (nil)\n");
-	}
-	else
-	{
-		printf("[%d] %s\n", h->len, h->str);
-		nodes++;
-	}
+	while (h != NULL)
+		{
+			if (h->str == NULL)
+			{
+				printf("[0] (nil)\n");
+			}
+			else
+			{
+				printf("[%d] %s\n", h->len, h->str);
+				h = h->next;
+				nodes++;
+			}
+		}
 
 	return (nodes);
 }
