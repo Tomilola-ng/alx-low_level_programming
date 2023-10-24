@@ -1,46 +1,46 @@
 #include "lists.h"
+
 /**
- * insert_nodeint_at_index - inserts a new node at a given position.
- * @head: pointer with the first node.
- * @idx: the index of the node
- * @n: data of the node to create
- * Return: Adress of the node that index points
+ * insert_nodeint_at_index - program to insert nodes
+ * @head: HEAD ptr
+ * @idx: node index
+ * @n: node creation
+ * Return: ptr value
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *p, *temp;
-	unsigned int i;
+	listint_t *ptr, *temporary;
+	unsigned int counter;
 
 	if (idx == 0)
 	{
-		p = malloc(sizeof(listint_t));
-		if (p == NULL)
-		{
+		ptr = malloc(sizeof(listint_t));
+		if (ptr == NULL)
 			return (NULL);
-		}
-		p->n = n;
-		p->next = *head;
-		*head = p;
-		return (p);
+
+		ptr->n = n;
+		ptr->next = *head;
+		*head = ptr;
+		return (ptr);
 	}
-	temp = *head;
-	i = 1;
-	while (temp != NULL)
+	temporary = *head;
+	counter = 1;
+	while (temporary != NULL)
 	{
-		if (i == idx)
+		if (counter == idx)
 		{
-			p = malloc(sizeof(listint_t));
-			if (p == NULL)
-			{
+			ptr = malloc(sizeof(listint_t));
+			if (ptr == NULL)
 				return (NULL);
-			}
-			p->n = n;
-			p->next = temp->next;
-			temp->next = p;
-			return (p);
+
+			ptr->n = n;
+			ptr->next = temporary->next;
+			temporary->next = ptr;
+			return (ptr);
 		}
-		temp = temp->next;
-		i++;
+		temporary = temporary->next;
+		counter++;
 	}
 	return (NULL);
 }
