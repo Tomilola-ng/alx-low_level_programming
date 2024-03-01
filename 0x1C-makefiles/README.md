@@ -1,2 +1,1 @@
-# alx-low_level_programming
-## 0x1C-makefiles
+# 0x1B.c
