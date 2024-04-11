@@ -1,40 +1,46 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Performs a binary search on a sorted array.
- * @array: Pointer to the first element of the sorted array to search.
- * @size: The number of elements in the array.
- * @value: The value to search for.
- * Return: The index of the first occurrence of the value in the array,
- *         or -1 if the value is not found.
+ * binary_search - MAIN FUNCTION
+ * @array: PTR TO ARRAY
+ * @size: ARRAY COUNT
+ * @value: SEARCH VALUE
+ * Return: idx as -1 or actual value
  */
 
 int binary_search(int *array, size_t size, int value)
 {
-    if (array == NULL) {
+	size_t left = 0, right = size - 1, mid;
+
+    if (array == NULL)
         return (-1);
-    }
 
-    size_t left = 0;
-    size_t right = size - 1;
+    printf("Searching in array: ");
+    for (mid = 0; mid < size; mid++)
+        printf("%d, ", array[mid]);
+    printf("\b\b\n");
 
-    while (left <= right) {
-        printf("Searching in array: ");
-        for (size_t idx = left; idx <= right; idx++) { // Modified loop to include right index
-            printf("%d, ", array[idx]);
-        }
-        printf("\n");
+    while (left <= right)
+    {
+        mid = left + (right - left) / 2;
 
-        size_t mid = left + (right - left) / 2;
-
-        if (array[mid] == value) {
+        if (array[mid] == value)
             return (mid);
-        }
-
-        if (array[mid] > value) {
-            right = mid - 1;
-        } else {
+        else if (array[mid] < value)
+        {
+            printf("Searching in array: ");
+            for (size_t i = left; i <= right; i++)
+                printf("%d, ", array[i]);
+            printf("\b\b\n");
             left = mid + 1;
+        }
+        else
+        {
+            printf("Searching in array: ");
+            for (size_t i = left; i <= right; i++)
+                printf("%d, ", array[i]);
+            printf("\b\b\n");
+            right = mid - 1;
         }
     }
 
